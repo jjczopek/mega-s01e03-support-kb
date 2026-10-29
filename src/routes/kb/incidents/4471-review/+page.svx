@@ -1,0 +1,38 @@
+---
+layout: runbook
+title: '#4471 · review of merged date reports'
+owner: support desk
+status: review
+reviewed: 2026-10-29
+signature: Codex
+---
+
+<script>
+  import CauseTable from '#lib/kb/CauseTable.svelte';
+  import QueueTimeline from '#lib/kb/QueueTimeline.svelte';
+  import DedupeExplorer from '#lib/kb/DedupeExplorer.svelte';
+  import RenderStamp from '#lib/kb/RenderStamp.svelte';
+  const signature = metadata.signature;
+</script>
+
+The desk merged reports with similar subjects, but matching subjects does not establish a common cause. The underlying data and tenant settings distinguish a shared parser that reads dates month first from a booking-v3 hint that instructs users to enter dates month first while the form reads them in the tenant's locale.
+
+## Reports by cause
+
+<CauseTable ticket={4471} />
+
+The table uses unique report IDs and tenant settings. Intake tags are guesses, not the cause. The desk notes identify reports that read as a one-day move; the current classifier still files them by tenant and channel. Investigate their underlying cause before treating the table's attribution as conclusive.
+
+## The queue over time
+
+<QueueTimeline ticket={4471} />
+
+The export is a snapshot: received dates and merge dates are different events. Do not infer that every report was received when the desk merged it.
+
+## Duplicates
+
+Match reports by established cause, not subject alone. Keep uncertain reports separate until the tenant and route are known. The accepted decision record remains historical; replace it through a new decision if the desk adopts this rule.
+
+<DedupeExplorer />
+
+<RenderStamp {signature} />
