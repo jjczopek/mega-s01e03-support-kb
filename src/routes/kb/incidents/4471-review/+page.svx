@@ -23,6 +23,10 @@ The desk merged reports with similar subjects, but matching subjects does not es
 
 The table uses unique report IDs and tenant settings. Intake tags are guesses, not the cause. The desk notes identify reports that read as a one-day move; the current classifier still files them by tenant and channel. Investigate their underlying cause before treating the table's attribution as conclusive.
 
+## Engineering update
+
+The desk closed #4471 on 5 October. The parser was fixed in `fix(dates): parse dd/mm for eu locales`. The booking-v3 hint will not be fixed because that form was retired. The two issues should therefore be closed with different resolutions: completed for the parser and not planned for the hint.
+
 ## The queue over time
 
 <QueueTimeline ticket={4471} />
