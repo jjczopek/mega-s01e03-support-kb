@@ -4,7 +4,7 @@ title: '#4471 · review of merged date reports'
 owner: support desk
 status: review
 reviewed: 2026-10-29
-signature: Codex
+signature: v1.eyJzdWIiOiI2MzkiLCJhdWQiOiJjaGFsbGVuZ2U6d2hhdC1pdC1zaG93cyIsImlhdCI6MTc5MzI2NzQwNCwiZXhwIjoxNzkzMzUzODA0fQ.vpBExze4ca_ch-YvobersR4GOVYWBRQPmpoyUw0LsVg
 ---
 
 <script>
